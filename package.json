@@ -2,6 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://github.com/Dheeraj-v/Hall",
   "dependencies": {
     "antd": "^3.9.2",
     "axios": "^0.18.0",
@@ -9,6 +10,7 @@
     "bootstrap": "^4.1.3",
     "cors": "^2.8.4",
     "express": "^4.16.3",
+    "gh-pages": "^2.0.1",
     "mongoose": "^5.2.17",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
@@ -19,7 +21,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "nodemon": "^1.18.4"
