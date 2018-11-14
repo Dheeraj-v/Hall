@@ -1,0 +1,31 @@
+@import './antd.css';
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+#root{
+  background-color: yellow;
+}
+.mar-b-0{
+  margin-bottom: 0px;
+}
+.mar-b-10{
+  margin-bottom: 1em;
+}
+.heading{
+  text-decoration: underline;
+  font-weight: bold;
+}
+.ant-carousel .slick-slide {
+  text-align: center;
+  height: 160px;
+  line-height: 160px;
+  background: #364d79;
+  overflow: hidden;
+}
+
+.ant-carousel .slick-slide h3 {
+  color: #fff;
+}
