@@ -5,14 +5,20 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
-#root{
+/* #root{
   background-color: yellow;
-}
+} */
 .mar-b-0{
   margin-bottom: 0px;
 }
 .mar-b-10{
   margin-bottom: 1em;
+}
+.mar-l-8{
+  margin-left: .8em;
+}
+.mar-t-10{
+  margin-top: 1em;
 }
 .heading{
   text-decoration: underline;
@@ -20,8 +26,8 @@ body {
 }
 .ant-carousel .slick-slide {
   text-align: center;
-  height: 160px;
-  line-height: 160px;
+  height: 300px;
+  line-height: 300px;
   background: #364d79;
   overflow: hidden;
 }

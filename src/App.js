@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
+
+import ResponsiveMenu from 'react-responsive-navbar';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import Create from './components/create';
-import Index from './components/index';
+import AboutUs from './components/AboutUs/aboutUs';
+import ContactUs from './components/ContactUs/contactUs';
+import Index from './components/Index/index';
 import './App.css';
 import FooterComponent from './components/footer'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -16,16 +19,17 @@ class App extends Component {
             <a className="navbar-brand">React Express App</a>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav mr-auto">
-                <li className="nav-item"><Link to={'/create'} className="nav-link">Create</Link></li>
-                <li className="nav-item"><Link to={'/index'} className="nav-link">List</Link></li>
+                <li className="nav-item"><Link to={'/AboutUs'} className="nav-link">About us</Link></li>
+                <li className="nav-item"><Link to={'/ContactUs'} className="nav-link">Contact us</Link></li>
               </ul>
               <hr />
             </div>
-          </nav> <br />
+          </nav>
+          <br />
           <Switch>
             <Route exact path="/" component={Index} />
-            <Route path='/create' component={Create} />
-            <Route path='/index' component={Index} />
+            <Route path='/AboutUs' component={AboutUs} />
+            <Route path='/ContactUs' component={ContactUs} />
           </Switch>
           <FooterComponent></FooterComponent>
         </div>
