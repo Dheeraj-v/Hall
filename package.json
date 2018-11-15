@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.io/Dheeraj-v/Hall",
+  "homepage": "https://dheeraj-v.github.io/Dheeraj-v/Hall",
   "dependencies": {
     "antd": "^3.9.2",
     "axios": "^0.18.0",
