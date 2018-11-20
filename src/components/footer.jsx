@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Layout, Divider, Card } from 'antd';
+import { Row, Col, Layout, Divider } from 'antd';
 import { Link } from 'react-router-dom';
 
 const { Footer } = Layout

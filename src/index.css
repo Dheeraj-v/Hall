@@ -5,9 +5,9 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
-/* #root{
+#root{
   background-color: yellow;
-} */
+}
 .mar-b-0{
   margin-bottom: 0px;
 }
@@ -34,4 +34,10 @@ body {
 
 .ant-carousel .slick-slide h3 {
   color: #fff;
+}
+@media only screen and (min-width: 768px) {
+  .menu-icon
+  {
+    display: none;
+}
 }
