@@ -6,6 +6,7 @@ body {
   font-family: sans-serif;
 }
 #root{
+  background: url('images/bg1.jpg');
   background-color: yellow;
 }
 .mar-b-0{
@@ -16,6 +17,9 @@ body {
 }
 .mar-l-8{
   margin-left: .8em;
+}
+.mar-r-10{
+  margin-right: 1em;
 }
 .mar-t-10{
   margin-top: 1em;
@@ -35,9 +39,13 @@ body {
 .ant-carousel .slick-slide h3 {
   color: #fff;
 }
-@media only screen and (min-width: 768px) {
-  .menu-icon
-  {
-    display: none;
+.custom-para{
+  text-indent: 2em;
 }
+
+.contact-form textarea {
+  resize: none;
+}
+.contact-form .contact-form-button{
+  width: 100%;
 }

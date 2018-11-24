@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Layout, Divider } from 'antd';
+import { Row, Col, Layout, Divider, Icon } from 'antd';
 import { Link } from 'react-router-dom';
 
 const { Footer } = Layout
@@ -23,8 +23,8 @@ class FooterComponent extends Component {
 
                     </Col>
                     <Col lg={{ span: 8 }} md={8} md={{ offset: 8 }} sm={24} xs={24} className='mar-b-10'>
-                        <p className="mar-b-0 heading"> Follow Us </p>
-                        <p><span>FB</span><span>Twitter</span></p>
+                        <p className="mar-b-10 heading"> Follow Us </p>
+                        <p><Icon type="facebook" theme="filled" className="mar-r-10" style={{ fontSize: '18px', color: '#08c' }} /><Icon type="twitter" className="mar-r-10" style={{ fontSize: '18px', color: '#08c' }} /></p>
 
 
                     </Col>

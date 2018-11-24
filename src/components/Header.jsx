@@ -1,10 +1,20 @@
 import React, { Component } from 'react';
-import { Drawer, Icon } from 'antd';
+import { Drawer, Icon, Menu } from 'antd';
 import { Link } from 'react-router-dom';
 
 class HeaderComponent extends Component {
-    state = { visible: false };
-
+    constructor(props) {
+        super(props);
+        this.state = {
+            visible: false,
+            current: 'home',
+        }
+    }
+    handleClick = (e) => {
+        this.setState({
+            current: e.key,
+        });
+    }
     showDrawer = () => {
         this.setState({
             visible: true,
@@ -18,29 +28,38 @@ class HeaderComponent extends Component {
     };
     render() {
         return (
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <a className="navbar-brand">React Express App</a>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav mr-auto">
-                        <li className="nav-item"><Link to={'/AboutUs'} className="nav-link">About us</Link></li>
-                        <li className="nav-item"><Link to={'/ContactUs'} className="nav-link">Contact us</Link></li>
-                    </ul>
-                    <hr />
-                </div>
-                <Icon type="menu-fold" onClick={this.showDrawer} className="menu-icon" />
-                <Drawer
-                    placement="right"
-                    closable={true}
-                    onClose={this.onClose}
-                    visible={this.state.visible}
-                >
-                    <ul className="navbar-nav mr-auto">
-                        <li className="nav-item"><Link to={'/'} className="nav-link" onClick={this.onClose}>Home</Link></li>
-                        <li className="nav-item"><Link to={'/AboutUs'} className="nav-link" onClick={this.onClose}>About us</Link></li>
-                        <li className="nav-item"><Link to={'/ContactUs'} className="nav-link" onClick={this.onClose}>Contact us</Link></li>
-                    </ul>
-                </Drawer>
-            </nav>
+            <div>
+                <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                    <a className="navbar-brand">VARTHAGAR HALL</a>
+                    <Menu
+                        onClick={this.handleClick}
+                        selectedKeys={[this.state.current]}
+                        mode="horizontal"
+                    >
+                        <Menu.Item key="home"><Link to={'/'} className="nav-link">HOME </Link>
+
+                        </Menu.Item>
+                        <Menu.Item key="aboutUs"><Link to={'/AboutUs'} className="nav-link">ABOUT US </Link>
+                        </Menu.Item>
+                        <Menu.Item key="contactUs"><Link to={'/ContactUs'} className="nav-link">CONTACT US </Link>
+                        </Menu.Item>
+                    </Menu>
+                    <Icon type="menu-fold" onClick={this.showDrawer} className="menu-icon" />
+                    <Drawer
+                        placement="right"
+                        closable={true}
+                        onClose={this.onClose}
+                        visible={this.state.visible}
+                    >
+                        <ul className="navbar-nav mr-auto">
+                            <li className="nav-item"><Link to={'/'} className="nav-link" onClick={this.onClose}>Home</Link></li>
+                            <li className="nav-item"><Link to={'/AboutUs'} className="nav-link" onClick={this.onClose}>About us</Link></li>
+                            <li className="nav-item"><Link to={'/ContactUs'} className="nav-link" onClick={this.onClose}>Contact us</Link></li>
+                        </ul>
+                    </Drawer>
+                </nav>
+
+            </div>
         )
     }
 }
