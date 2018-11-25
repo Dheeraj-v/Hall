@@ -18,7 +18,7 @@ class ContactUs extends Component {
 
                 <Row>
                     <Col lg={12} md={12} sm={24} xs={24}>
-                        <p className="mar-b-0 heading"> Address </p>
+                        <p className="mar-b-0 heading mar-t-100"> Address </p>
                         <p className="mar-b-0">46 Bazzar Road, Periyapet</p>
                         <p className="mar-b-0">West Saidapet</p>
                         <p className="mar-b-0">Chennai - 600015</p>

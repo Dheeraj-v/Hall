@@ -9,6 +9,7 @@ body {
   background: url('images/bg1.jpg');
   background-color: yellow;
 }
+
 .mar-b-0{
   margin-bottom: 0px;
 }
@@ -23,6 +24,12 @@ body {
 }
 .mar-t-10{
   margin-top: 1em;
+}
+@media only screen and (min-width: 768px) {
+
+.mar-t-100{
+  margin-top: 10em;
+}
 }
 .heading{
   text-decoration: underline;
@@ -48,4 +55,10 @@ body {
 }
 .contact-form .contact-form-button{
   width: 100%;
+}
+.ant-menu.menuBar{
+  background: #f8f9fa;
+}
+.contact-form .contact-form-button{
+  margin-bottom: 2em;
 }

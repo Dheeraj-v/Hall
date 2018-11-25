@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Drawer, Icon, Menu } from 'antd';
 import { Link } from 'react-router-dom';
+import { logo } from '../images/logo.png';
 
 class HeaderComponent extends Component {
     constructor(props) {
@@ -30,11 +31,12 @@ class HeaderComponent extends Component {
         return (
             <div>
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                    <a className="navbar-brand">VARTHAGAR HALL</a>
+                    {/* <a className="navbar-brand"><img src="/images/logo.png" alt="logo" /></a> */}
+                    <a className="navbar-brand"><h4>Varthagar Mandapam</h4></a>
                     <Menu
                         onClick={this.handleClick}
                         selectedKeys={[this.state.current]}
-                        mode="horizontal"
+                        mode="horizontal" className="menuBar"
                     >
                         <Menu.Item key="home"><Link to={'/'} className="nav-link">HOME </Link>
 

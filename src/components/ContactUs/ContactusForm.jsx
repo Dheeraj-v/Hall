@@ -12,8 +12,15 @@ class ContactusForm extends Component {
         this.props.form.validateFieldsAndScroll((err, values) => {
             if (!err) {
                 console.log('Received values of form: ', values);
-                axios.post('https://script.google.com/macros/s/AKfycbxqZLbWJxi-7G3Rh0BsKkInSDSXonqPCIFFDGd-SX_S_gLmaxlG/exec',
+                axios.post('https://script.google.com/macros/s/AKfycbwmivja7ooh_Y7jmMS017o6lZooQXqnCexnELsCcRrZKC3sekg/exec',
+                    // {
+                    //     headers: {
 
+                    //         'Access-Control-Allow-Origin': '*',
+                    //         'Content-Type': 'application/javascript',
+                    //         'dataType': 'jsonp',
+                    //     }
+                    // },
                     values)
                     .then(res => console.log(res.data));
 
