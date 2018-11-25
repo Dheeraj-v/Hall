@@ -38,7 +38,7 @@ class HeaderComponent extends Component {
                         selectedKeys={[this.state.current]}
                         mode="horizontal" className="menuBar"
                     >
-                        <Menu.Item key="home"><Link to={'/'} className="nav-link">HOME </Link>
+                        <Menu.Item key="home"><Link to={'/home'} className="nav-link">HOME </Link>
 
                         </Menu.Item>
                         <Menu.Item key="aboutUs"><Link to={'/AboutUs'} className="nav-link">ABOUT US </Link>
@@ -54,7 +54,7 @@ class HeaderComponent extends Component {
                         visible={this.state.visible}
                     >
                         <ul className="navbar-nav mr-auto">
-                            <li className="nav-item"><Link to={'/'} className="nav-link" onClick={this.onClose}>Home</Link></li>
+                            <li className="nav-item"><Link to={'/home'} className="nav-link" onClick={this.onClose}>Home</Link></li>
                             <li className="nav-item"><Link to={'/AboutUs'} className="nav-link" onClick={this.onClose}>About us</Link></li>
                             <li className="nav-item"><Link to={'/ContactUs'} className="nav-link" onClick={this.onClose}>Contact us</Link></li>
                         </ul>
