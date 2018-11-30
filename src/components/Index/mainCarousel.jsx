@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Carousel, Icon } from 'antd';
-import pic1 from '../../images/pic1'
+import pic1 from '../../images/pic1.jpg'
 
 class MainCarousel extends Component {
     constructor(props) {
