@@ -31,7 +31,7 @@ class FooterComponent extends Component {
                 </Row>
                 <Divider />
                 <Row type="flex" justify="center">
-                    <Col lg={2} md={2} sm={24} xs={24}><a href='javascript:void(0)'> Designed By</a></Col>
+                    <Col lg={2} md={2} sm={24} xs={24}><a href='/'> Designed By</a></Col>
                 </Row>
 
             </Footer >

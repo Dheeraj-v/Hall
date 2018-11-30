@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, withRouter } from 'react-router-dom';
 import AboutUs from './components/AboutUs/aboutUs';
 import ContactUs from './components/ContactUs/contactUs';
 import Index from './components/Index/index';
@@ -21,6 +21,7 @@ class App extends Component {
           <HeaderComponent></HeaderComponent>
           <br />
           <Switch>
+            <Route exact path="/" component={Index} />
             <Route exact path="/home" component={Index} />
             <Route path='/AboutUs' component={AboutUs} />
             <Route path='/ContactUs' component={ContactUs} />
@@ -32,4 +33,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withRouter(App);

@@ -6,10 +6,31 @@ body {
   font-family: sans-serif;
 }
 #root{
-  background: url('images/bg1.jpg');
-  background-color: yellow;
+   background: url('images/bg1.jpg');
+  background-color: yellow; 
 }
-
+#root .ant-carousel .slick-slide{
+  line-height: 0;
+}
+.carousel-image{
+  height: 100%;
+  width:100%;
+}
+.bg1{
+  background:lightblue url('images/pic1.jpg') no-repeat fixed center;
+  background-color: yellow; 
+  
+}
+.bg2{
+  background: url('images/p2.jpg');
+  background-color: yellow; 
+  
+}
+.bg3{
+  background: url('images/p3.jpg');
+  background-color: yellow; 
+  
+}
 .mar-b-0{
   margin-bottom: 0px;
 }
@@ -25,11 +46,17 @@ body {
 .mar-t-10{
   margin-top: 1em;
 }
+.mar-t-20{
+  margin-top: 1em;
+}
 @media only screen and (min-width: 768px) {
 
 .mar-t-100{
   margin-top: 10em;
 }
+}
+.pad-t-20{
+  padding-top: 2em;
 }
 .heading{
   text-decoration: underline;
@@ -61,4 +88,43 @@ body {
 }
 .contact-form .contact-form-button{
   margin-bottom: 2em;
+}
+.logo-style{
+  display: block;
+  text-align: center;
+}
+.navbar .ant-menu-horizontal{
+  border-bottom:none; 
+}
+.content-style{
+  padding: 2em;
+}
+.trivia-para{
+  font-size: 18px;
+}
+.by-name{
+  text-align: end;
+  padding: 1em 2em;
+}
+.carousel-wrapper{
+  position: relative;
+}
+.carousel-wrapper .anticon-right{
+  position: absolute;
+  right: 0;
+  top:42%;
+  font-size: 3em;
+  cursor: pointer;
+  color: white;
+}
+.carousel-wrapper .anticon-left{
+  position: absolute;
+  left: 0;
+  top:42%;
+  font-size: 3em;
+  cursor: pointer;
+  color: white;  
+}
+.bg{
+  background: url('https://i.imgur.com/ZXBtVw7.jpg')
 }

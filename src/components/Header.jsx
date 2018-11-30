@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { Drawer, Icon, Menu } from 'antd';
 import { Link } from 'react-router-dom';
-import { logo } from '../images/logo.png';
+import PropTypes from 'prop-types';
 
 class HeaderComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
             visible: false,
-            current: 'home',
+            current: window.location.pathname.substr(1) !== "" ? window.location.pathname.substr(1) : "home",
         }
     }
     handleClick = (e) => {
@@ -31,8 +31,8 @@ class HeaderComponent extends Component {
         return (
             <div>
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                    {/* <a className="navbar-brand"><img src="/images/logo.png" alt="logo" /></a> */}
-                    <a className="navbar-brand"><h4>Varthagar Mandapam</h4></a>
+                    {/* <a className="navbar-brand"><img src="/images/logo1.png" alt="logo" /></a> */}
+                    <a className="navbar-brand"><span className="logo-style">Varthagar</span> <span>Thirumana Mandapam</span></a>
                     <Menu
                         onClick={this.handleClick}
                         selectedKeys={[this.state.current]}
@@ -41,9 +41,9 @@ class HeaderComponent extends Component {
                         <Menu.Item key="home"><Link to={'/home'} className="nav-link">HOME </Link>
 
                         </Menu.Item>
-                        <Menu.Item key="aboutUs"><Link to={'/AboutUs'} className="nav-link">ABOUT US </Link>
+                        <Menu.Item key="AboutUs"><Link to={'/AboutUs'} className="nav-link">ABOUT US </Link>
                         </Menu.Item>
-                        <Menu.Item key="contactUs"><Link to={'/ContactUs'} className="nav-link">CONTACT US </Link>
+                        <Menu.Item key="ContactUs"><Link to={'/ContactUs'} className="nav-link">CONTACT US </Link>
                         </Menu.Item>
                     </Menu>
                     <Icon type="menu-fold" onClick={this.showDrawer} className="menu-icon" />
@@ -65,5 +65,7 @@ class HeaderComponent extends Component {
         )
     }
 }
-
+HeaderComponent.propTypes = {
+    location: PropTypes.any
+}
 export default HeaderComponent

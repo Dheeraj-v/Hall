@@ -1,17 +1,29 @@
 import React, { Component } from 'react';
-import { Carousel } from 'antd';
+import { Carousel, Icon } from 'antd';
 
 class MainCarousel extends Component {
-
+    constructor(props) {
+        super(props)
+        this.next = this.next.bind(this);
+        this.previous = this.previous.bind(this);
+    }
+    next() {
+        this.carousel.next();
+    }
+    previous() {
+        this.carousel.prev();
+    }
     render() {
         return (
-            <div>
-                <Carousel effect="fade">
-                    <div><h3>1</h3></div>
-                    <div><h3>2</h3></div>
-                    <div><h3>3</h3></div>
-                    <div><h3>4</h3></div>
+            <div className="carousel-wrapper">
+                <Carousel autoplay effect="fade" ref={node => this.carousel = node}>
+                    <div><img src="images/p2.jpg" className='carousel-image' /></div>
+                    <div className="bg2"><img src="images/pic1.jpg" className='carousel-image' /></div>
+                    <div className="bg3"><img src="images/p3.jpg" className='carousel-image' /></div>
+                    <div className="bg1"><img src="images/p2.jpg" className='carousel-image' /> </div>
                 </Carousel>
+                <Icon type="left" onClick={this.previous} />
+                <Icon type="right" onClick={this.next} />
             </div>
         )
     }

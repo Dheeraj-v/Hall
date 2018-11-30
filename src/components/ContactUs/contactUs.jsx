@@ -2,12 +2,10 @@ import React, { Component } from 'react';
 import { Form, Col, Row } from 'antd';
 import PropTypes from 'prop-types';
 import ContactusForm from './ContactusForm'
-const FormItem = Form.Item;
 
 class ContactUs extends Component {
 
     render() {
-        const { getFieldDecorator } = this.props.form;
         return (
             <div>
                 <Row>

@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import MainCarousel from './mainCarousel'
+import AnimatedCarousel from './AnimatedCarousel'
+
 import IndexContent from './indexContent';
+
 class Index extends Component {
 
     render() {

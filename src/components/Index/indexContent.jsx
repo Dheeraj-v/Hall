@@ -6,19 +6,21 @@ class IndexContent extends Component {
 
     render() {
         return (
-            <Layout>
-                <Content className="mar-l-8 mar-t-10">
-                    <h5 >Welcome to lorem ipsum</h5>
+            <Layout className = "content-style">
+                <Content className="mar-l-8 ">
+                    <h5 >Greetings!</h5>
                     <p className ="mar-r-10 custom-para">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    Weddings are ‘once in a lifetime’ affair and we know very well how important even the minutest things are. Therefore, we leave no stone upturned when you come to celebrate familial ceremonies at our property.
+                    If you are in Chennai near saidapet and want to make your wedding or reception event special, then this is the place.
+                    We welcome you warmly to our newly renovated Marriage Hall with all modern amenities.
    
 </p>
                     <p className ="mar-r-10 custom-para">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type 
+                    Our Spacious and tradional marriage hall is in main area so that your friends and families can easily reach the place without any difficulties.
+                    Our newly modified Hall is equiped with Centralized AC which extends to the Dining Hall too. Also we have 6 individual rooms equipped with Air Conditioners.
                     
 </p>
                     <p className ="mar-r-10 custom-para">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                         </p>
                 </Content>
             </Layout>
