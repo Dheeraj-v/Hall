@@ -6,8 +6,8 @@ body {
   font-family: sans-serif;
 }
 #root{
-   background: url('images/bg1.jpg');
-  background-color: yellow; 
+   background: url('images/bg1.jpg'); 
+   background-color: yellow; 
 }
 #root .ant-carousel .slick-slide{
   line-height: 0;

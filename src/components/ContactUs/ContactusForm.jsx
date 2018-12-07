@@ -11,52 +11,13 @@ class ContactusForm extends Component {
         e.preventDefault();
         this.props.form.validateFieldsAndScroll((err, values) => {
             if (!err) {
-                console.log(values)
-                let value = Object.keys(values).map(key => {
-                    return encodeURIComponent(key) + '=' + encodeURIComponent(values[key])
-
-                }).join('&')
-                console.log('Received values of form: ', values);
-                // axios.post('https://script.google.com/macros/s/AKfycbwmivja7ooh_Y7jmMS017o6lZooQXqnCexnELsCcRrZKC3sekg/exec',
-                //     // axios.post('http://localhost:4000/contactUs/add',
-
-                //     {
-                //         headers: {
-
-                //             'Content-Type': 'application/x-www-form-urlencoded',
-                //             'crossdomain': true
-                //         }
-                //     },
-                //     value)
-
-                //     .then(res => console.log(res.data))
-                //     .catch(function (error) {
-                //         console.log("Post Error : " + error);
-                //     });
-
                 var url = "https://script.google.com/macros/s/AKfycbwmivja7ooh_Y7jmMS017o6lZooQXqnCexnELsCcRrZKC3sekg/exec"; // prod
-                var xhr = new XMLHttpRequest();
-                xhr.open('POST', url);
-                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
-                xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
-                xhr.onload = function () {
-                    if (xhr.status === 200) {
-                        // console.log(xhr.responseText);
-                        // document.getElementById('gform').style.display = 'none'; // hide form
-                        // document.getElementById('thankyou').style.display = 'block';
-                        // document.getElementById('browse_all').style.display = 'block';
-                        return;
-                    }
-                    else {
-                        console.log('Request failed. Returned status: ' + xhr.status);
-                        return;
-                    }
-                };
-                // url encode form data for sending as post data
-                var encoded = Object.keys(values).map(function (k) {
-                    return encodeURIComponent(k) + '=' + encodeURIComponent(values[k])
-                }).join('&')
-                xhr.send(encoded);
+                axios.get(url + "?name=" + values.name + "&phonenumber=" + values.phonenumber + "&description=" + values.description, true)
+                    .then(res => console.log(res.data))
+                    .catch(function (error) {
+                        console.log("Post Error : " + error);
+                    });
+
 
             }
         });
