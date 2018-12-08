@@ -1,11 +1,27 @@
 import React, { Component } from 'react';
-import { Layout, Carousel } from 'antd';
+import { Layout, Card, Row, Col } from 'antd';
+import Lightbox from 'react-image-lightbox';
+import './about.css'
 
 const { Content } = Layout
+const { Meta } = Card;
+
+const images = [
+    'https://raw.githubusercontent.com/Dheeraj-v/Hall/master/src/images/pic1.jpg',
+    'https://raw.githubusercontent.com/Dheeraj-v/Hall/master/src/images/p2.jpg'
+];
 
 class AboutusContent extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            photoIndex: 0,
+            isOpen: false
+        }
+    }
 
     render() {
+        const { photoIndex, isOpen } = this.state;
         return (
             <Layout className="content-style">
                 <Content className="mar-l-8 mar-t-10">
@@ -13,30 +29,45 @@ class AboutusContent extends Component {
 
                         "love for you is a journey, starting at forever and ending at never."
                 </h3>
-                    <h4 className=" mar-t-10"> Following are the Amenities: </h4>
-                    <ul>
-                        <li>Hall seating capacity- 600</li>
-                        <li>Dining hall capacity- 180</li>
-                        <li>Centralized AC</li>
-                        <li>24hrs Power backup</li>
-                        <li>Rooms- 6 (AC)</li>
-                    </ul>
-                    <ul>
-                        <li>Hall Decoration</li>
-                        <li>Ring Ceremony</li>
-                        <li>Wedding Receptions</li>
-                        <li>Weddings</li>
-                        <li>Floral Arrangement</li>
-                    </ul>
-                    <ul>
-                        <li>Welcoming The New Borns</li>
-                        <li>A Family Reunion</li>
-                        <li>Birthday Decoration and gettogether</li>
-                        <li>Musical Parties</li>
-                        <li>Breakfast / Lunch / hi-Tea / Dinner</li>
-                    </ul>
+                    <Row>
+                        {images.map((item, index) => {
 
+                            return (
 
+                                <Col lg={8} md={8} key={index}>
+                                    <Card
+                                        hoverable
+                                        style={{ width: 300 }}
+                                        cover={<img alt="example" src={item} onClick={() => this.setState({ isOpen: true, photoIndex: index })} />}
+                                    >
+                                        <Meta
+                                            title="Europe Street beat"
+                                            description="www.instagram.com"
+                                        />
+                                    </Card>
+                                </Col>
+                            )
+                        })}
+                    </Row>
+
+                    {isOpen && (
+                        <Lightbox
+                            mainSrc={images[photoIndex]}
+                            nextSrc={images[(photoIndex + 1) % images.length]}
+                            prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+                            onCloseRequest={() => this.setState({ isOpen: false })}
+                            onMovePrevRequest={() =>
+                                this.setState({
+                                    photoIndex: (photoIndex + images.length - 1) % images.length,
+                                })
+                            }
+                            onMoveNextRequest={() =>
+                                this.setState({
+                                    photoIndex: (photoIndex + 1) % images.length,
+                                })
+                            }
+                        />
+                    )}
                 </Content >
             </Layout >
         )

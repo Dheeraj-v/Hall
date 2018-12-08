@@ -7,6 +7,7 @@ import Index from './components/Index/index';
 import './App.css';
 import './antd.css';
 import 'antd/dist/antd.css';
+import 'react-image-lightbox/style.css';
 import FooterComponent from './components/footer';
 import HeaderComponent from './components/Header';
 
