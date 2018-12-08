@@ -99,7 +99,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f16f5c', end
 .custom-para{
   text-indent: 2em;
 }
-
+.custom-header{
+  text-align: center;
+}
 .contact-form textarea {
   resize: none;
 }

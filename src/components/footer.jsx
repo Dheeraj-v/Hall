@@ -10,7 +10,7 @@ class FooterComponent extends Component {
             <Footer>
                 <Row type="flex" justify="center" className='mar-b-10'>
                     <Col lg={3} md={3} sm={6} xs={6}><Link to={'/home'} className="nav-link"> Home</Link></Col>
-                    <Col lg={3} md={3} sm={9} xs={9}><Link to={'/AboutUs'} className="nav-link"> About us</Link> </Col>
+                    <Col lg={3} md={3} sm={9} xs={9}><Link to={'/Gallery'} className="nav-link">Gallery</Link> </Col>
                     <Col lg={3} md={3} sm={9} xs={9}><Link to={'/ContactUs'} className="nav-link"> Contact us</Link></Col >
 
                 </Row >

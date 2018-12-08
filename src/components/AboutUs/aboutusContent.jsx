@@ -7,8 +7,31 @@ const { Content } = Layout
 const { Meta } = Card;
 
 const images = [
-    'https://raw.githubusercontent.com/Dheeraj-v/Hall/master/src/images/pic1.jpg',
-    'https://raw.githubusercontent.com/Dheeraj-v/Hall/master/src/images/p2.jpg'
+    {
+        url: 'https://raw.githubusercontent.com/Dheeraj-v/Hall/master/src/images/pic1.jpg',
+        title: 'External View'
+    },
+    {
+        url: 'https://raw.githubusercontent.com/Dheeraj-v/Hall/master/src/images/p2.jpg',
+        title: 'Welcome Hall'
+    },
+    {
+        url: 'https://raw.githubusercontent.com/Dheeraj-v/Hall/master/src/images/p4.jpg',
+        title: 'Dining Hall'
+    },
+    {
+        url: 'https://raw.githubusercontent.com/Dheeraj-v/Hall/master/src/images/p7.jpg',
+        title: 'Buffet Hall'
+    },
+    {
+        url: 'https://raw.githubusercontent.com/Dheeraj-v/Hall/master/src/images/p6.jpg',
+        title: 'Dining Hall'
+    },
+    {
+        url: 'https://raw.githubusercontent.com/Dheeraj-v/Hall/master/src/images/p3.jpg',
+        title: 'External View'
+    },
+
 ];
 
 class AboutusContent extends Component {
@@ -25,24 +48,22 @@ class AboutusContent extends Component {
         return (
             <Layout className="content-style">
                 <Content className="mar-l-8 mar-t-10">
-                    <h3 className="mar-r-10 custom-para">
-
-                        "love for you is a journey, starting at forever and ending at never."
+                    <h3 className="mar-r-10 custom-header">
+                        "Love for you is a journey, starting at forever and ending at never."
                 </h3>
                     <Row>
                         {images.map((item, index) => {
 
                             return (
 
-                                <Col lg={8} md={8} key={index}>
+                                <Col lg={8} md={8} key={index} className='mar-t-10'>
                                     <Card
                                         hoverable
                                         style={{ width: 300 }}
-                                        cover={<img alt="example" src={item} onClick={() => this.setState({ isOpen: true, photoIndex: index })} />}
+                                        cover={<img alt="example" className="tab-image" src={item.url} onClick={() => this.setState({ isOpen: true, photoIndex: index })} />}
                                     >
                                         <Meta
-                                            title="Europe Street beat"
-                                            description="www.instagram.com"
+                                            title={item.title}
                                         />
                                     </Card>
                                 </Col>
@@ -52,9 +73,9 @@ class AboutusContent extends Component {
 
                     {isOpen && (
                         <Lightbox
-                            mainSrc={images[photoIndex]}
-                            nextSrc={images[(photoIndex + 1) % images.length]}
-                            prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+                            mainSrc={images[photoIndex].url}
+                            nextSrc={images[(photoIndex + 1) % images.length].url}
+                            prevSrc={images[(photoIndex + images.length - 1) % images.length].url}
                             onCloseRequest={() => this.setState({ isOpen: false })}
                             onMovePrevRequest={() =>
                                 this.setState({

@@ -13,7 +13,11 @@ class ContactusForm extends Component {
             if (!err) {
                 var url = "https://script.google.com/macros/s/AKfycbwmivja7ooh_Y7jmMS017o6lZooQXqnCexnELsCcRrZKC3sekg/exec"; // prod
                 axios.get(url + "?name=" + values.name + "&phonenumber=" + values.phonenumber + "&description=" + values.description, true)
-                    .then(res => console.log(res.data))
+                    .then(res => {
+                        console.log(res.data);
+                        this.props.form.resetFields()
+                    }
+                    )
                     .catch(function (error) {
                         console.log("Post Error : " + error);
                     });

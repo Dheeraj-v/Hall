@@ -41,7 +41,7 @@ class HeaderComponent extends Component {
                         <Menu.Item key="home"><Link to={'/home'} className="nav-link">HOME </Link>
 
                         </Menu.Item>
-                        <Menu.Item key="AboutUs"><Link to={'/AboutUs'} className="nav-link">ABOUT US </Link>
+                        <Menu.Item key="Gallery"><Link to={'/Gallery'} className="nav-link">GALLERY </Link>
                         </Menu.Item>
                         <Menu.Item key="ContactUs"><Link to={'/ContactUs'} className="nav-link">CONTACT US </Link>
                         </Menu.Item>
@@ -55,7 +55,7 @@ class HeaderComponent extends Component {
                     >
                         <ul className="navbar-nav mr-auto">
                             <li className="nav-item"><Link to={'/home'} className="nav-link" onClick={this.onClose}>Home</Link></li>
-                            <li className="nav-item"><Link to={'/AboutUs'} className="nav-link" onClick={this.onClose}>About us</Link></li>
+                            <li className="nav-item"><Link to={'/Gallery'} className="nav-link" onClick={this.onClose}>Gallery</Link></li>
                             <li className="nav-item"><Link to={'/ContactUs'} className="nav-link" onClick={this.onClose}>Contact us</Link></li>
                         </ul>
                     </Drawer>

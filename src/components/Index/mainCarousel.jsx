@@ -19,9 +19,9 @@ class MainCarousel extends Component {
             <div className="carousel-wrapper">
                 <Carousel autoplay effect="fade" ref={node => this.carousel = node}>
                     <div><img src="https://raw.githubusercontent.com/Dheeraj-v/Hall/master/src/images/p2.jpg" className='carousel-image' /></div>
-                    <div className="bg2"><img src="https://raw.githubusercontent.com/Dheeraj-v/Hall/master/src/images/pic1.jpg" className='carousel-image' /></div>
-                    <div className="bg3"><img src="https://raw.githubusercontent.com/Dheeraj-v/Hall/master/src/images/p3.jpg" className='carousel-image' /></div>
-                    <div className="bg1"><img src="https://raw.githubusercontent.com/Dheeraj-v/Hall/master/src/images/pic1.jpg" className='carousel-image' /> </div>
+                    <div ><img src="https://raw.githubusercontent.com/Dheeraj-v/Hall/master/src/images/pic1.jpg" className='carousel-image' /></div>
+                    <div ><img src="https://raw.githubusercontent.com/Dheeraj-v/Hall/master/src/images/p3.jpg" className='carousel-image' /></div>
+                    <div ><img src="https://raw.githubusercontent.com/Dheeraj-v/Hall/master/src/images/pic1.jpg" className='carousel-image' /> </div>
                 </Carousel>
                 <Icon type="left" onClick={this.previous} />
                 <Icon type="right" onClick={this.next} />
