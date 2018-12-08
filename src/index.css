@@ -13,30 +13,39 @@ body {
 #root{
    /* background: url('images/gradient.png'); 
    background-color: yellow;  */
-   background: rgba(241,111,92,1);
+  background: linear-gradient(-45deg, red, yellow);
+   /* background: rgba(241,111,92,1);
 background: -moz-linear-gradient(left, rgba(241,111,92,1) 0%, rgba(246,41,12,1) 0%, rgba(240,47,23,1) 0%, rgba(255,154,158,1) 0%, rgba(250,208,196,1) 100%);
 background: -webkit-gradient(left top, right top, color-stop(0%, rgba(241,111,92,1)), color-stop(0%, rgba(246,41,12,1)), color-stop(0%, rgba(240,47,23,1)), color-stop(0%, rgba(255,154,158,1)), color-stop(100%, rgba(250,208,196,1)));
 background: -webkit-linear-gradient(left, rgba(241,111,92,1) 0%, rgba(246,41,12,1) 0%, rgba(240,47,23,1) 0%, rgba(255,154,158,1) 0%, rgba(250,208,196,1) 100%);
 background: -o-linear-gradient(left, rgba(241,111,92,1) 0%, rgba(246,41,12,1) 0%, rgba(240,47,23,1) 0%, rgba(255,154,158,1) 0%, rgba(250,208,196,1) 100%);
 background: -ms-linear-gradient(left, rgba(241,111,92,1) 0%, rgba(246,41,12,1) 0%, rgba(240,47,23,1) 0%, rgba(255,154,158,1) 0%, rgba(250,208,196,1) 100%);
 background: linear-gradient(to right, rgba(241,111,92,1) 0%, rgba(246,41,12,1) 0%, rgba(240,47,23,1) 0%, rgba(255,154,158,1) 0%, rgba(250,208,196,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f16f5c', endColorstr='#fad0c4', GradientType=1 );
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f16f5c', endColorstr='#fad0c4', GradientType=1 ); */
 }
 #root .ant-carousel .slick-slide{
   line-height: 0;
 }
 #root .ant-layout{
   background: transparent;
+  font-family: cursive;
+  color: #fff;
 }
 .carousel-image{
   height: 512px;
   width:100%;
+}
+#root .bg-light{
+  border-radius: 0 0 40px 40px;
 }
 @media only screen and (max-width: 768px) {
 
 .carousel-image{
   height: 100%;
   width:100%;
+}
+#root .bg-light{
+  border-radius: 0;
 }
 }
 .bg1{
@@ -156,4 +165,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f16f5c', end
 .font {
   font-family: 'barbie',sans-serif;
   
+}
+.custom-font{
+  font-family: cursive;
+  color: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+.size{
+  font-size: 25px;
+}
 }

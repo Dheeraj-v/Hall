@@ -7,7 +7,7 @@ class ContactUs extends Component {
 
     render() {
         return (
-            <div>
+            <div className='custom-font'>
                 <Row>
                     <Col>
                         <h3>Contact us for any queries</h3>
@@ -15,11 +15,13 @@ class ContactUs extends Component {
                 </Row>
 
                 <Row>
-                    <Col lg={12} md={12} sm={24} xs={24}>
+                    <Col lg={12} md={12} sm={24} xs={24} className='size'>
                         <p className="mar-b-0 heading mar-t-100"> Address </p>
-                        <p className="mar-b-0">46 Bazzar Road, Periyapet</p>
-                        <p className="mar-b-0">West Saidapet</p>
+                        <p className="mar-b-0">No.46, Bazzar Road</p>
+                        <p className="mar-b-0">Saidapet</p>
                         <p className="mar-b-0">Chennai - 600015</p>
+                        <p className="mar-b-0">Ph : 044-24359999</p>
+
                     </Col>
                     <Col lg={10} md={12} sm={24} xs={24}>
                         <ContactusForm />
