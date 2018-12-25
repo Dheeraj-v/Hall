@@ -17,7 +17,7 @@ class IndexContent extends Component {
 </p>
                     <p className ="mar-r-10 custom-para">
                     Our Spacious and tradional marriage hall is in main area so that your friends and families can easily reach the place without any difficulties.
-                    Our newly modified Hall is equiped with Centralized AC which extends to the Dining Hall too. Also we have 6 individual rooms equipped with Air Conditioners.
+                    Our newly modified Hall is equiped with Centralized AC which extends to the Dining Hall too. Also we have 6 individual rooms equipped with Air Conditioners
                     
 </p>
                     <p className ="mar-r-10 custom-para">
